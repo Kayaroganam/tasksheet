@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>add task</title>
+</head>
+<body>
+	<form action="editrecord/{{task.id}}" method="post">
+		{% csrf_token %}
+		S.No<input type="number" name="serial_no" value="{{task.s_no}}"><br>
+		Project NO<input type="text" name="project_no" value="{{task.project_no}}"><br>
+		Project Name<input type="text" name="project_name" value="{{task.project_name}}"><br>
+		Process ID<input type="text" name="process_id" value="{{task.process_id}}"><br>
+		Process Sequence Name<input type="text" name="process_sequence" value="{{task.process_sequence}}"><br>
+		Est Hours<input type="text" name="estimated_hours" value="{{task.estimated_hours}}"><br>
+		Task<input type="text" name="tasks" value="{{task.tasks}}"><br>
+		Link<input type="text" name="server_link" value="{{task.server_link}}"><br>
+		Date<input type="date" name="date" value="{{task.date}}"><br>
+		Hours<input type="text" name="hours" value="{{task.hours}}"><br><br><br>
+		Submit<input type="submit" value="Submit">
+		</form>
+</body>
+</html>
