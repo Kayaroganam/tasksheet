@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project List</title>
+</head>
+<body>
+    <a href="../ProjectList/"><button>Project List</button></a>
+    <a href="../TaskSheet/"><button>Task Sheet</button></a>
+    <h1>Project List</h1>
+<table border='1' cellspacing='0'>
+    <tr>
+        <th>Code</th>
+        <th>Project Name</th>
+        <th>Project No</th>
+        <th>Old Project No</th>
+    </tr>
+    {% for x in proj_list %}
+    <tr>
+        <td>{{ x.CODE }}</td>
+        <td>{{ x.PROJECT_NAME }}</td>
+        <td>{{ x.PROJECT_NO }}</td>
+        <td>{{ x.OLD_PROJECT_NO }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

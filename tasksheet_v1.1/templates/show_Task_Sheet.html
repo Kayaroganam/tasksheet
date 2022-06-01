@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task Sheet</title>
+</head>
+<body>
+	<a href="../../ProjectList/"><button>Project List</button></a>
+	<a href="../../TaskSheet/"><button>Task Sheet</button></a>
+	<table border="1" cellspacing="0">
+		<tr>
+			<th>S.No</th>
+			<th>Project No</th>
+			<th>Project Name</th>
+			<th>Process ID</th>
+			<th>Process Sequence Name</th>
+			<th>Estimated Hours</th>
+			<th>Tasks</th>
+			<th>Server Link</th>
+			<th>Date</th>
+			<th>Hours</th>
+		</tr>
+		{% for x in task_sheet%}
+		<tr>
+			<td>{{x.s_no}}</td>
+			<td>{{x.project_no}}</td>
+			<td>{{x.project_name}}</td>
+			<td>{{x.process_id}}</td>
+			<td>{{x.process_sequence}}</td>
+			<td>{{x.estimated_hours}}</td>
+			<td>{{x.tasks}}</td>
+			<td>{{x.server_link}}</td>
+			<td>{{x.date}}</td>
+			<td>{{x.hours}}</td>
+			<td><a href="edit/{{ x.id }}"><button>edit</button></a></td>
+			<td><a href="delete/{{ x.id }}"><button>delete</button></a></td>
+			
+		</tr>
+		{% endfor %}
+	</table>
+	<a href="add_task/"><button>add</button></a>
+</body>
+</html>
